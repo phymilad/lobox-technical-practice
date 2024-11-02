@@ -1,22 +1,20 @@
-import React from 'react'
+import React from "react";
 
 type Props = {
-    value: string
-    type: "button" | "checkbox" | "color" | "date" | "datetime-local" | "email" | "file" | "hidden" | "image" | "month" | "number" | "password" | "radio" | "range" | "reset" | "search" | "submit" | "tel" | "text" | "time" | "url" | "week"
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-    placeholder: string
-}
+  value: string;
+  placeholder: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+};
 
-export const Input = ({
-    value,
-    onChange,
-    placeholder
-}: Props) => {
+export const Input: React.FC<Props> = ({ value, placeholder, onChange, onKeyDown }) => {
   return (
     <input
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      onKeyDown={onKeyDown}
+      placeholder={placeholder}
+      className="multi-select-dropdown__input"
     />
-  )
-}
+  );
+};
