@@ -1,31 +1,20 @@
-import React from 'react'
-import { Option } from '../../models/types'
-import { Typography } from '../typography'
+import React from "react";
+import "./index.scss";
+import { Option } from "../../models/types";
 
 type Props = {
-    option: Option
-    isSelected: boolean
-    onClick: (id: number) => void
-}
+  option: Option;
+  isSelected: boolean;
+  onClick: () => void;
+};
 
-export const OptionItem = ({
-    option,
-    isSelected,
-    onClick,
-} : Props) => {
+export const OptionItem: React.FC<Props> = ({ option, isSelected, onClick }) => {
   return (
-    <div 
-        style={{
-            display: "flex", 
-            justifyContent: "space-between", 
-            alignItems: "center",
-            backgroundColor: isSelected ? "blue" : "white",
-            borderRadius: ".25rem"
-        }}
-        onClick={() => onClick(option.id)}
+    <div
+      className={`option-item ${isSelected ? "option-item--selected" : ""}`}
+      onClick={onClick}
     >
-        <Typography text={option.label} />
-        <p>Tick</p>
+      {option.label}
     </div>
-  )
-}
+  );
+};
