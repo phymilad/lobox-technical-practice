@@ -1,10 +1,10 @@
 import { Option } from "../models/types";
 
 export const options : Option[] = [
-    {id: 1, value: "science", label: "Science", icon: "x"},
-    {id: 2, value: "education", label: "Education", icon: "x"},
-    {id: 3, value: "art", label: "Art", icon: "x"},
-    {id: 4, value: "sport", label: "Sport", icon: "x"},
-    {id: 5, value: "games", label: "Games", icon: "x"},
-    {id: 6, value: "health", label: "Health", icon: "x"},
+    { id: 1, label: "Science" },
+    { id: 2, label: "Education" },
+    { id: 3, label: "Art" },
+    { id: 4, label: "Sport" },
+    { id: 5, label: "Games" },
+    { id: 6, label: "Health" },
 ]
