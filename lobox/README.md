@@ -5,7 +5,7 @@ A Multi-Select Dropdown Component built with React, TypeScript, and SCSS. This c
 Installation
 Clone the repository:
 git clone https://github.com/phymilad/lobox-technical-practice.git
-cd lobox-technical-practice
+cd lobox-technical-practice/lobox
 
 Install dependencies:
 npm install
