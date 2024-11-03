@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.scss";
 import { Option } from "../../models/types";
+import { HiMiniCheck } from "react-icons/hi2";
 
 type Props = {
   option: Option;
@@ -15,6 +16,7 @@ export const OptionItem: React.FC<Props> = ({ option, isSelected, onClick }) => 
       onClick={onClick}
     >
       {option.label}
+      {isSelected && <HiMiniCheck />}
     </div>
   );
 };

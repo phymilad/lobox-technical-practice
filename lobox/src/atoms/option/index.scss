@@ -1,16 +1,17 @@
 .option-item {
     padding: 0.5rem;
     cursor: pointer;
-    border-bottom: 1px solid #eee;
     transition: background-color 0.3s;
+    display: flex;
     
     &:hover {
       background-color: #f0f0f0;
     }
     
     &--selected {
-      background-color: #81bad8;
-      border-radius: .75rem;
-      color: white;
+      background-color: #d5cff8;
+      border-radius: 8px;
+      color: rgb(29, 61, 243);
+      justify-content: space-between;
     }
   }

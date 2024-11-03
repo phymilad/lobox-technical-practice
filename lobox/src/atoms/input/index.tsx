@@ -14,7 +14,6 @@ export const Input: React.FC<Props> = ({ value, placeholder, onChange, onKeyDown
       onChange={onChange}
       onKeyDown={onKeyDown}
       placeholder={placeholder}
-      className="multi-select-dropdown__input"
     />
   );
 };
