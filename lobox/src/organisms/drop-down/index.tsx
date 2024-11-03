@@ -3,10 +3,15 @@ import "./index.scss";
 import { Option } from "../../models/types";
 import { Input } from "../../atoms/input";
 import { OptionItem } from "../../atoms/option";
-import { options } from "../../utils/constants";
 import { HiChevronDown, HiChevronUp  } from "react-icons/hi2";
 
-const DropDown: React.FC = () => {
+type Props = {
+  options: Option[]
+}
+
+const DropDown = ({
+  options
+} : Props) => {
   const [inputValue, setInputValue] = useState("");
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
   const [showOptions, setShowOptions] = useState(false);

@@ -1,10 +1,11 @@
 import DropDown from "./organisms/drop-down"
+import { options } from "./utils/constants"
 
 function App() {
 
   return (
     <>
-      <DropDown />
+      <DropDown options={options} />
     </>
   )
 }
