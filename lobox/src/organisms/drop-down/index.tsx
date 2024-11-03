@@ -4,7 +4,7 @@ import { Option } from "../../models/types";
 import { Input } from "../../atoms/input";
 import { OptionItem } from "../../atoms/option";
 import { options } from "../../utils/constants";
-
+import { HiChevronDown, HiChevronUp  } from "react-icons/hi2";
 
 const DropDown: React.FC = () => {
   const [inputValue, setInputValue] = useState("");
@@ -71,6 +71,7 @@ const DropDown: React.FC = () => {
           onChange={handleInputChange}
           onKeyDown={handleKeyPress}
         />
+        {showOptions ? <HiChevronUp className="dropdown__arrow"/> : <HiChevronDown className="dropdown__arrow"/>}
       </div>
       {showOptions && (
         <div className="dropdown__options-container">
